@@ -1,0 +1,36 @@
+﻿@model GameOfLifeWebApplication.Models.Grid
+@{
+    ViewBag.Title = "View";
+}
+
+@{ int rows = Model.grid.GetLength(0); }
+@{ int columns = Model.grid.GetLength(1); }
+@{ int count = 0;}
+<p>Generation = @Html.DisplayFor(modelItem => Model.generation)</p>
+
+<table class="table">
+    @for (int i = 0; i < rows; i++)
+    {
+        <tr>
+            @for (int j = 0; j < columns; j++)
+            {
+                <td onclick="myFunction(this.id)" id="@count" class="@Model.grid[i,j].ToString()" value="@Model.grid[i,j]"></td>
+                count++;
+            }
+        </tr>
+    }
+</table>
+
+<input type="button"onclick="reset()" class="btn-danger" value="Erase" />
+<script>
+    function myFunction(id) {
+        var element = document.getElementById(id);
+        element.classList.toggle("False");
+        element.classList.toggle("True");
+    }
+
+    function reset() {
+        var emlement = document.getElementsByTagName('td');
+    }
+</script>
+
