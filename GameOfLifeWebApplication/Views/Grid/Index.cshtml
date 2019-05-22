@@ -21,7 +21,7 @@
     }
 </table>
 
-<input type="button"onclick="reset()" class="btn-danger" value="Erase" />
+<input type="button" onclick="reset()" class="btn-danger" value="Clear Board" />
 <script>
     function myFunction(id) {
         var element = document.getElementById(id);
@@ -30,7 +30,10 @@
     }
 
     function reset() {
-        var emlement = document.getElementsByTagName('td');
+        var x = document.getElementsByClassName('True');
+        while (x.length > 0) {
+            x[0].className = 'False';
+        }
     }
 </script>
 
