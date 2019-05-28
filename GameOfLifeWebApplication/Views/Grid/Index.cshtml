@@ -9,7 +9,7 @@
 
 <p style="text-align:center">Generation = @Html.DisplayFor(modelItem => Model.generation)</p>
 
-<table class="center">
+<table id="tab" class="center">
     @for (int i = 0; i < rows; i++)
     {
         <tr>
@@ -23,6 +23,9 @@
 </table>
 <div style="text-align:center">
     <input type="button" onclick="reset()" class="btn-danger" value="Clear Board" />
+    <input type="button" onclick="blinker()" class="btn-default" value="blinker" />
+    <input type="button" onclick="toad()" class="btn-default" value="toad" />
+    <input type="button" onclick="glider()" class="btn-default" value="glider" />
 </div>
 
 <script>
@@ -34,9 +37,24 @@
 
     function reset() {
         var x = document.getElementsByClassName('True');
-        while (x.length > 0) {
-            x[0].className = 'False';
-        }
+        $(x).attr('class', 'False');
+    }
+    function blinker() {
+        var x = document.getElementsByClassName('True');
+        $(x).attr('class', 'False');
+        $("#12, #13, #14, #35, #36, #37, #50, #51, #52, #87, #88, #89").attr('class', 'True');
+    }
+
+    function toad() {
+        var x = document.getElementsByClassName('True');
+        $(x).attr('class', 'False');
+        $("#23, #24, #25, #32, #33, #34, #66, #67, #68, #75, #76, #77").attr('class', 'True');
+    }
+
+    function glider() {
+        var x = document.getElementsByClassName('True');
+        $(x).attr('class', 'False');
+        $("#11, #22, #30, #31, #32").attr('class', 'True');
     }
 </script>
 
