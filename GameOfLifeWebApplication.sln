@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeWebApplication", "GameOfLifeWebApplication\GameOfLifeWebApplication.csproj", "{C25260E6-BE83-49D3-BF74-08A338E1F534}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTests", "GameTests\GameTests.csproj", "{E1768105-F6EC-4961-B2D6-7D0637D00BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C25260E6-BE83-49D3-BF74-08A338E1F534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C25260E6-BE83-49D3-BF74-08A338E1F534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C25260E6-BE83-49D3-BF74-08A338E1F534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1768105-F6EC-4961-B2D6-7D0637D00BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1768105-F6EC-4961-B2D6-7D0637D00BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1768105-F6EC-4961-B2D6-7D0637D00BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1768105-F6EC-4961-B2D6-7D0637D00BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
