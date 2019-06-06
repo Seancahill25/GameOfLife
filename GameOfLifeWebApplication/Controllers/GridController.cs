@@ -9,10 +9,12 @@ namespace GameOfLifeWebApplication.Controllers
 {
     public class GridController : Controller
     {
-        // GET: Grid
         public ActionResult Index()
         {
-            Grid grid = new Grid(10, 10);
+            bool[,] game = new bool[12, 12];
+            Grid grid = new Grid(game);
+
+           
             return View(grid);
         }
 

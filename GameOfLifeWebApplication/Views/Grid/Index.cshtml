@@ -3,8 +3,8 @@
     ViewBag.Title = "View";
 }
 
-@{ int rows = Model.grid.GetLength(0); }
-@{ int columns = Model.grid.GetLength(1); }
+@{ int rows = Model.newgrid.GetLength(0); }
+@{ int columns = Model.newgrid.GetLength(1); }
 @{ int count = 0;}
 
 <p style="text-align:center">Generation = @Html.DisplayFor(modelItem => Model.generation)</p>
@@ -15,7 +15,7 @@
         <tr>
             @for (int j = 0; j < columns; j++)
             {
-                <td onclick="myFunction(this.id)" id="@count" class="@Model.grid[i,j].ToString()" value="@Model.grid[i,j]"></td>
+                <td onclick="myFunction(this.id)" id="@count" class="@Model.newgrid[i,j].ToString()" value="@Model.newgrid[i,j]"></td>
                 count++;
             }
         </tr>
@@ -26,7 +26,7 @@
     <input type="button" onclick="blinker()" class="btn-default" value="Blinker" />
     <input type="button" onclick="toad()" class="btn-default" value="Toad" />
     <input type="button" onclick="glider()" class="btn-default" value="Glider" />
-    <input type="submit" onclick="start()"class="btn-success" value="Start"/>
+    <input type="submit" value="Start" class="btn-success" onclick="location.href ='@Url.Action("Index","Grid")'" />
 </div>
 
 <script>
